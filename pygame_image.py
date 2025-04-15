@@ -23,19 +23,22 @@ def main():
         screen.blit(bg_img, [-x, 0])#練習６
         screen.blit(bg_img2, [-x+1600, 0])#練習７
         screen.blit(bg_img, [-x+3200, 0])#練習９
-        #screen.blit(bg_img, [0, 0])
         
         key_lst = pg.key.get_pressed()#練習10.3
         # print(key_lst)
-        # print(key_lst[pg.K_UP])
+        # print(key_lst[pg.K_UP]
+         #練習10.4
+        x=-1
+        y=0
         if key_lst[pg.K_UP]:
-            kk_rct.move_ip((0,-1)) #練習10.4
+            y-=1
         if key_lst[pg.K_DOWN]:
-            kk_rct.move_ip((0,+1)) #練習10.4
+            y+=1
         if key_lst[pg.K_RIGHT]:
-            kk_rct.move_ip((+1,0)) #練習10.4
+            x+=2
         if key_lst[pg.K_LEFT]:
-            kk_rct.move_ip((-1,0)) #練習10.4
+            x-=1
+        kk_rct.move_ip((x,y))
         screen.blit(kk_img, kk_rct) #練習10.5
         pg.display.update()
         tmr += 1        
