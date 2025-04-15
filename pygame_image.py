@@ -36,7 +36,7 @@ def main():
             kk_rct.move_ip((+1,0)) #練習10.4
         if key_lst[pg.K_LEFT]:
             kk_rct.move_ip((-1,0)) #練習10.4
-        
+        screen.blit(kk_img, kk_rct) #練習10.5
         pg.display.update()
         tmr += 1        
         clock.tick(200) #練習５
