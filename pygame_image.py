@@ -25,6 +25,7 @@ def main():
         screen.blit(kk_img, [300, 200]) #練習４
         kk_rct = kk_img.get_rect() #練習10.1
         kk_rct.center = 300,200 #練習10.2
+        key_lst = pg.key.get_pressed()
         pg.display.update()
         tmr += 1        
         clock.tick(200) #練習５
